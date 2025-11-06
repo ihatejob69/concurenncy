@@ -20,8 +20,6 @@ func PingPong(w io.Writer) {
 			<-chPong
 		}
 	}()
-
-	// Горутина Pong
 	go func() {
 		defer wg.Done()
 		for i := 0; i < 5; i++ {
